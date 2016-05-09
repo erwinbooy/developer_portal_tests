@@ -8,51 +8,6 @@ import pages.Page;
  * This is the Abstract class for the Profiles
  * It will hold all the information for the Basic Profile
  * 
- *  Menu links
- *  - My Account			Yes
- *  - Dashboard				Yes
- *  
- *  Menu items
- *  - Home					Yes
- *  - Online Navigation		Yes
- *  - Navigation Software	Yes
- *  - Real-Time Maps		Yes
- *  - Bridge				Yes	
- *  - Sports				Yes
- *  
- *  Sidebar Online Navigation
- *  - Overview				Yes
- *  - Online Routing		Yes
- *  - Online Maps			Yes
- *  - Online Search			Yes
- *  - Online Traffic		Yes
- *  - Maps SDK				Yes
- *  - Request Access		Yes
- *  - API Explorer			Yes
- *  
- *  Sidebar Navigation Software
- *  - Navkit				Yes
- *  - Downloads				Yes
- *  - FAQ					Yes
- *  - Integration Kit		Yes
- *  
- *  Sidebar Real-Time Maps
- *  - Overvew				Yes
- *  - NDS Map Updates		Yes
- *  - Map Input Tracker		Yes
- *  - Traffic Services		Yes
- *  
- *  Sidebar Bridge
- *  - A lot!!!				Yes
- *  
- *  Sidebar Sports
- *  - Overview				Yes
- *  - Camera Media Server	Yes
- *  - MySports Cloud		Yes
- *  
- *  Footer
- *  - Customer Support		Yes
- * 
  * @author Erwin Booij
  */
 public abstract class AbstractProfile implements Profile{
