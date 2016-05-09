@@ -5,7 +5,7 @@ import pages.OnlineNavigationPage;
 import pages.Page;
 
 /**
- * Developer Profile one
+ * Developer Profile one with full access
  * 
  * Should have Account link
  * Should have Dashboard link

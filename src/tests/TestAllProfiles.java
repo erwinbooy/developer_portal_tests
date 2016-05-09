@@ -2,6 +2,8 @@ package tests;
 import java.util.Iterator;
 import java.util.List;
 
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -43,6 +45,8 @@ public class TestAllProfiles extends TestBase {
 			idx = idx+1;
 		}
 		
+		// Now we setup our tests
+		setUp();
 		// Now return the testdata with all our users from the database
 		return testdata; 
 	}
@@ -82,4 +86,10 @@ public class TestAllProfiles extends TestBase {
 		// Sign out for the next user
 		homePage.clickSignOut();
 	}
+	
+	@AfterTest
+	public void quitDriver(){
+		this.tearDown();
+	}
+	
 }

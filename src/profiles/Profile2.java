@@ -5,7 +5,7 @@ import pages.OnlineNavigationPage;
 import pages.Page;
 
 /**
- * Developer Profile one
+ * Developer Profile two with limited access
  * 
  * Should have Account link
  * Should have Dashboard link
@@ -100,6 +100,6 @@ public class Profile2 extends AbstractProfile{
 	 * @return true/false
 	 */
 	public boolean hasCorrectSideBarItemsNS(User user, NavigationSoftwarePage myPage){
-		return super.hasCorrectSidebarItemsNS(user, myPage, true, true, false, false, false);
+		return super.hasCorrectSidebarItemsNS(user, myPage, true, false, false, false, false);
 	}
 }
