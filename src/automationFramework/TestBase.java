@@ -29,7 +29,7 @@ public abstract class TestBase extends TestCase {
 	/**
 	 * Always make sure we close the driver at the end of the test
 	 */
-	public void tearDown() throws Exception {
+	public void tearDown(){
 		myDriver.quit();
 	}
 }
