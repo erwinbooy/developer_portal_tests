@@ -1,8 +1,8 @@
-package profiles;
+package dev.portal.profiles;
 
-import pages.NavigationSoftwarePage;
-import pages.OnlineNavigationPage;
-import pages.Page;
+import dev.portal.pages.NavigationSoftwarePage;
+import dev.portal.pages.OnlineNavigationPage;
+import dev.portal.pages.Page;
 
 /**
  * Interface to be used for testing the Developer Profiles

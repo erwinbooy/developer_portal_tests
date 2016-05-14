@@ -1,8 +1,8 @@
-package pages;
+package dev.portal.pages;
 
 import org.openqa.selenium.WebDriver;
 
-import automationFramework.AbstractPage;
+import dev.portal.automationFramework.AbstractPage;
 
 public class MyAccountPage extends AbstractPage {
 

@@ -1,4 +1,4 @@
-package tests;
+package dev.portal.test.java;
 import java.util.Iterator;
 import java.util.List;
 
@@ -6,12 +6,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import automationFramework.PageProvider;
-import automationFramework.TestBase;
-import pages.HomePage;
-import pages.LoginPage;
-import profiles.User;
-import utils.TestUserTool;
+import dev.portal.automationFramework.PageProvider;
+import dev.portal.automationFramework.TestBase;
+import dev.portal.pages.HomePage;
+import dev.portal.pages.LoginPage;
+import dev.portal.profiles.User;
+import dev.portal.utils.java.TestUserTool;
 
 public class TestAllProfiles extends TestBase {
 

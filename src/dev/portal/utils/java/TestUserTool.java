@@ -1,4 +1,4 @@
-package utils;
+package dev.portal.utils.java;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,9 +9,9 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import profiles.Profile1;
-import profiles.Profile2;
-import profiles.User;
+import dev.portal.profiles.Profile1;
+import dev.portal.profiles.Profile2;
+import dev.portal.profiles.User;
 
 
 /**
@@ -35,7 +35,7 @@ public class TestUserTool {
 	 * @return List<String> with articleUrls
 	 */
 	public static List<User> getTestUsers(){
-		ArrayList<User> users = new ArrayList<>();
+		ArrayList<User> users = new ArrayList<User>();
 		BufferedReader dbReader = null;
 		String line = null;
 		String fields[] = null;

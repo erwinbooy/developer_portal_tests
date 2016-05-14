@@ -1,11 +1,11 @@
-package automationFramework;
+package dev.portal.automationFramework;
 
 import org.openqa.selenium.WebDriver;
 
-import pages.HomePage;
-import pages.LoginPage;
-import pages.NavigationSoftwarePage;
-import pages.OnlineNavigationPage;
+import dev.portal.pages.HomePage;
+import dev.portal.pages.LoginPage;
+import dev.portal.pages.NavigationSoftwarePage;
+import dev.portal.pages.OnlineNavigationPage;
 
 public class PageProvider {
 

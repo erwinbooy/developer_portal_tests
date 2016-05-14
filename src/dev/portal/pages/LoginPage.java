@@ -1,11 +1,11 @@
-package pages;
+package dev.portal.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import automationFramework.AbstractPage;
-import profiles.User;
+import dev.portal.automationFramework.AbstractPage;
+import dev.portal.profiles.User;
 
 public class LoginPage extends AbstractPage {
 

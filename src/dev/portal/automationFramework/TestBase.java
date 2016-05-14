@@ -1,4 +1,4 @@
-package automationFramework;
+package dev.portal.automationFramework;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

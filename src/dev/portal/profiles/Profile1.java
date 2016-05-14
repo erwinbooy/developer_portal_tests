@@ -1,11 +1,11 @@
-package profiles;
+package dev.portal.profiles;
 
-import pages.NavigationSoftwarePage;
-import pages.OnlineNavigationPage;
-import pages.Page;
+import dev.portal.pages.NavigationSoftwarePage;
+import dev.portal.pages.OnlineNavigationPage;
+import dev.portal.pages.Page;
 
 /**
- * Developer Profile two with limited access
+ * Developer Profile one with full access
  * 
  * Should have Account link
  * Should have Dashboard link
@@ -14,7 +14,7 @@ import pages.Page;
  *
  *  Menu links
  *  - My Account			Yes
- *  - Dashboard				No
+ *  - Dashboard				Yes
  *  
  *  Menu items
  *  - Home					Yes
@@ -22,7 +22,7 @@ import pages.Page;
  *  - Navigation Software	Yes
  *  - Real-Time Maps		Yes
  *  - Bridge				Yes	
- *  - Sports				No
+ *  - Sports				Yes
  *  
  *  Sidebar Online Navigation
  *  - Overview				Yes
@@ -36,9 +36,9 @@ import pages.Page;
  *  
  *  Sidebar Navigation Software
  *  - Navkit				Yes
- *  - Downloads				No
- *  - FAQ					No
- *  - Integration Kit		No
+ *  - Downloads				Yes
+ *  - FAQ					Yes
+ *  - Integration Kit		Yes
  *  
  *  Sidebar Real-Time Maps
  *  - Overvew				Yes
@@ -49,40 +49,39 @@ import pages.Page;
  *  Sidebar Bridge
  *  - A lot!!!				Yes
  *  
- *  Sidebar Sports			No
- *  - Overview				No
- *  - Camera Media Server	No
- *  - MySports Cloud		No
+ *  Sidebar Sports
+ *  - Overview				Yes
+ *  - Camera Media Server	Yes
+ *  - MySports Cloud		Yes
  *  
  *  Footer
- *  - Customer Support		No
- * 
- * @return
+ *  - Customer Support		Yes
  */
-public class Profile2 extends AbstractProfile{
+public class Profile1 extends AbstractProfile{
 	
-	/**
-	 * Method that checks if this profile has the correct links
-	 * This profile should have the following links
-	 */
-	public boolean hasCorrectLinks(User user, Page myPage){
-		return super.hasCorrectLinks(user, myPage, true, false);
-	}
-	
-	/**
-	 * Method that checks if this profile has the correct links
-	 * This profile should have the following links
-	 */
-	public boolean hasCorrectMenuItems(User user, Page myPage){
-		return super.hasCorrectMenuItems(user, myPage, true, true, true, true, true, false);
-	}
-
-	@Override
 	/**
 	 * We will use the basic logic from the Abstract class
 	 */
 	public boolean isLoggedIn(User myUser, Page myPage) {
 		return super.isLoggedIn(myUser, myPage);
+	}
+
+	/**
+	 * Method that checks if this profile has the correct links
+	 *  
+	 * @return true/false
+	 */
+	public boolean hasCorrectLinks(User user, Page myPage){
+		return super.hasCorrectLinks(user, myPage, true, true);
+	}
+
+	/**
+	 * Method that checks if this profile has the correct menu items
+	 *  
+	 * @return true/false
+	 */
+	public boolean hasCorrectMenuItems(User user, Page myPage){
+		return super.hasCorrectMenuItems(user, myPage, true, true, true, true, true, true);
 	}
 
 	/**
@@ -100,6 +99,6 @@ public class Profile2 extends AbstractProfile{
 	 * @return true/false
 	 */
 	public boolean hasCorrectSideBarItemsNS(User user, NavigationSoftwarePage myPage){
-		return super.hasCorrectSidebarItemsNS(user, myPage, true, false, false, false, false);
+		return super.hasCorrectSidebarItemsNS(user, myPage, true, true, true, true, true);
 	}
 }

@@ -1,4 +1,4 @@
-package profiles;
+package dev.portal.profiles;
 
 /**
  * Simple dto to store article information

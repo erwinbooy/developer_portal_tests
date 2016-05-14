@@ -1,4 +1,4 @@
-package pages;
+package dev.portal.pages;
 
 public interface Page {
 	public String getSignInText();

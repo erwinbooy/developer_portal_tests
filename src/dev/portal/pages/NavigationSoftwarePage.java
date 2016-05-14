@@ -1,9 +1,9 @@
-package pages;
+package dev.portal.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import automationFramework.AbstractPage;
+import dev.portal.automationFramework.AbstractPage;
 
 public class NavigationSoftwarePage extends AbstractPage {
 
