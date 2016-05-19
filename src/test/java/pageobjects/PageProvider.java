@@ -13,7 +13,7 @@ public class PageProvider {
 	 */
 	private static void getDriver() {
 		// We only want to get the driver once
-		if(driver == null){
+		if (driver == null) {
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 		}
@@ -38,8 +38,8 @@ public class PageProvider {
 		getDriver();
 		return new NavigationSoftwarePage(driver);
 	}
-	
-	public static void tearDown(){
+
+	public static void tearDown() {
 		driver.quit();
 	}
 }

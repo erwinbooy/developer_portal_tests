@@ -5,7 +5,7 @@ package test.java.modules.profiles;
  * 
  * @author Erwin
  */
-public class User{
+public class User {
 
 	private String username = null;
 	private String userpwd = null;

@@ -38,8 +38,8 @@ public abstract class AbstractProfile implements Profile {
 
 	/**
 	 * ; Method that checks if this profile has the correct links This profile
-	 * should have the following links.
-	 * Note that everything is available for the highest role in the system
+	 * should have the following links. Note that everything is available for
+	 * the highest role in the system
 	 * 
 	 * Menu links - My Account - Dashboard
 	 * 
