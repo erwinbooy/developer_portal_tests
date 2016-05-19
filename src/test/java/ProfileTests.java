@@ -13,5 +13,7 @@ import cucumber.api.junit.Cucumber;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/resources/features/profiles")
-public class Profile1Test {
+public class ProfileTests {
+	// No code needed here
+	// This tests executes all the features in the profiles directory
 }
