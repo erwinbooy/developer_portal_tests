@@ -1,11 +1,7 @@
-package dev.portal.automationFramework;
+package test.java.pageobjects;
 
 import org.openqa.selenium.WebDriver;
-
-import dev.portal.pages.HomePage;
-import dev.portal.pages.LoginPage;
-import dev.portal.pages.NavigationSoftwarePage;
-import dev.portal.pages.OnlineNavigationPage;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class PageProvider {
 
@@ -15,23 +11,35 @@ public class PageProvider {
 	 * @param WebDriver
 	 * @param WebDriverWait
 	 */
-	public static void initialize(WebDriver driver) {
-		PageProvider.driver = driver;
+	private static void getDriver() {
+		// We only want to get the driver once
+		if(driver == null){
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+		}
 	}
 
 	public static HomePage getDeveloperHomePage() {
+		getDriver();
 		return new HomePage(driver);
 	}
 
 	public static LoginPage getLoginPage() {
+		getDriver();
 		return new LoginPage(driver);
 	}
 
 	public static OnlineNavigationPage getOnlineNavigationPage() {
+		getDriver();
 		return new OnlineNavigationPage(driver);
 	}
 
 	public static NavigationSoftwarePage getNavigationSoftwarePage() {
+		getDriver();
 		return new NavigationSoftwarePage(driver);
+	}
+	
+	public static void tearDown(){
+		driver.quit();
 	}
 }

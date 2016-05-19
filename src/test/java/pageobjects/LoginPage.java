@@ -1,15 +1,15 @@
-package dev.portal.pages;
+package test.java.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import dev.portal.automationFramework.AbstractPage;
-import dev.portal.profiles.User;
+import test.java.modules.profiles.User;
 
 public class LoginPage extends AbstractPage {
 
-	//private String myPageUrl = "https://secure.mashery.com/login/developer.tomtom.com/";
+	// private String myPageUrl =
+	// "https://secure.mashery.com/login/developer.tomtom.com/";
 	private static String field_userid = "handle";
 	private static String field_userpwd = "passwd";
 	private static String button_signin = "process-login";
@@ -26,7 +26,7 @@ public class LoginPage extends AbstractPage {
 	/**
 	 * Enter user credentials and click SignIn
 	 */
-	public void signIn(User user){
+	public void signIn(User user) {
 		// First we wait for the page to have been built
 		waitForElementPresent(By.id("handle"));
 		WebElement userName = findElementOnPage(By.id(field_userid));

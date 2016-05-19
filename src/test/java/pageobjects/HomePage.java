@@ -1,8 +1,6 @@
-package dev.portal.pages;
+package test.java.pageobjects;
 
 import org.openqa.selenium.WebDriver;
-
-import dev.portal.automationFramework.AbstractPage;
 
 public class HomePage extends AbstractPage {
 

@@ -1,9 +1,7 @@
-package dev.portal.pages;
+package test.java.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import dev.portal.automationFramework.AbstractPage;
 
 public class OnlineNavigationPage extends AbstractPage {
 
@@ -18,7 +16,7 @@ public class OnlineNavigationPage extends AbstractPage {
 	public static String sidebar_maps_sdk = "[text()='Maps SDK']";
 	public static String sidebar_request_access = "[text()='Request access']";
 	public static String sidebar_api_explorer = "[text()='API Explorer']";
-	
+
 	/**
 	 * Constructor from the Abstract Class
 	 * 
@@ -27,114 +25,122 @@ public class OnlineNavigationPage extends AbstractPage {
 	public OnlineNavigationPage(WebDriver driver) {
 		super(driver);
 	}
-	
+
 	/**
 	 * Check if the sidebar overview link is showing
+	 * 
 	 * @return
 	 */
-	public boolean hasSideBarItemOverview(){
-		try{
-			findElementOnPage(By.xpath(sidebar_id+sidebar_item+sidebar_overview));
+	public boolean hasSideBarItemOverview() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_item + sidebar_overview));
 			return true;
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			// We didn't find the element
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Check if the sidebar online routing link is showing
+	 * 
 	 * @return
 	 */
-	public boolean hasSideBarItemOnlineRouting(){
-		try{
-			findElementOnPage(By.xpath(sidebar_id+sidebar_item+sidebar_online_routing));
+	public boolean hasSideBarItemOnlineRouting() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_item + sidebar_online_routing));
 			return true;
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			// We didn't find the element
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Check if the sidebar online maps link is showing
+	 * 
 	 * @return
 	 */
-	public boolean hasSideBarItemOnlineMaps(){
-		try{
-			findElementOnPage(By.xpath(sidebar_id+sidebar_item+sidebar_online_maps));
+	public boolean hasSideBarItemOnlineMaps() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_item + sidebar_online_maps));
 			return true;
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			// We didn't find the element
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Check if the sidebar online search link is showing
+	 * 
 	 * @return
 	 */
-	public boolean hasSideBarItemOnlineSearch(){
-		try{
-			findElementOnPage(By.xpath(sidebar_id+sidebar_item+sidebar_online_search));
+	public boolean hasSideBarItemOnlineSearch() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_item + sidebar_online_search));
 			return true;
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			// We didn't find the element
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Check if the sidebar online traffic link is showing
+	 * 
 	 * @return
 	 */
-	public boolean hasSideBarItemOnlineTraffic(){
-		try{
-			findElementOnPage(By.xpath(sidebar_id+sidebar_item+sidebar_online_traffic));
+	public boolean hasSideBarItemOnlineTraffic() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_item + sidebar_online_traffic));
 			return true;
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			// We didn't find the element
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Check if the sidebar maps sdk link is showing
+	 * 
 	 * @return
 	 */
-	public boolean hasSideBarItemMapsSDK(){
-		try{
-			findElementOnPage(By.xpath(sidebar_id+sidebar_item+sidebar_maps_sdk));
+	public boolean hasSideBarItemMapsSDK() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_item + sidebar_maps_sdk));
 			return true;
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			// We didn't find the element
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Check if the sidebar request access link is showing
+	 * 
 	 * @return
 	 */
-	public boolean hasSideBarItemRequestAccess(){
-		try{
-			findElementOnPage(By.xpath(sidebar_id+sidebar_item+sidebar_request_access));
+	public boolean hasSideBarItemRequestAccess() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_item + sidebar_request_access));
 			return true;
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			// We didn't find the element
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Check if the sidebar api explorer link is showing
+	 * 
 	 * @return
 	 */
-	public boolean hasSideBarItemApiExplorer(){
-		try{
-			findElementOnPage(By.xpath(sidebar_id+sidebar_item+sidebar_api_explorer));
+	public boolean hasSideBarItemApiExplorer() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_item + sidebar_api_explorer));
 			return true;
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			// We didn't find the element
 		}
 		return false;
