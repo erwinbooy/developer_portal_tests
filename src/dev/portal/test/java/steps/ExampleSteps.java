@@ -1,4 +1,4 @@
-package dev.portal.test.java;
+package dev.portal.test.java.steps;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -6,8 +6,9 @@ import static org.junit.Assert.assertThat;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import dev.portal.test.java.Example1;
 
-public class StepDefinitions {
+public class ExampleSteps {
 	 private dev.portal.test.java.Example1 belly;
 	    private int waitingTime;
 
