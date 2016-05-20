@@ -7,6 +7,7 @@ import test.java.pageobjects.HomePage;
 import test.java.pageobjects.LoginPage;
 import test.java.pageobjects.NavigationSoftwarePage;
 import test.java.pageobjects.OnlineNavigationPage;
+import test.java.pageobjects.SportsPage;
 
 public class PageProvider {
 
@@ -33,6 +34,10 @@ public class PageProvider {
 
 	public static NavigationSoftwarePage getNavigationSoftwarePage() {
 		return new NavigationSoftwarePage(driver);
+	}
+	
+	public static SportsPage getSportsPage(){
+		return new SportsPage(driver);
 	}
 
 	public static void tearDown() {

@@ -3,6 +3,7 @@ package test.java.steps;
 import static org.junit.Assert.assertTrue;
 
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import test.java.helpers.PageProvider;
 import test.java.pageobjects.Page;
 
@@ -23,6 +24,11 @@ public class ProductMenuSteps {
 	
 	private Page myPage = null;
 
+	@When("^I click on the product menu sports$")
+	public void i_click_on_the_product_menu_sports() throws Throwable {
+		myPage.clickMenuItemSports();
+	}
+	
 	@Then("^I see the product menu home (.*)$")
 	public void i_see_the_product_menu_home(String link) throws Throwable {
 		assertTrue(myPage.hasMenuItemHome() == Boolean.parseBoolean(link));

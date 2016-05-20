@@ -1,5 +1,6 @@
 package test.java.steps;
 import static org.junit.Assert.assertTrue;
+
 import cucumber.api.java.en.Then;
 import test.java.helpers.PageProvider;
 import test.java.pageobjects.Page;
