@@ -6,6 +6,11 @@ import org.openqa.selenium.WebElement;
 
 import test.java.modules.profiles.User;
 
+/**
+ * This Page is for the login details screen that you get after you click the Sign in link
+ * @author Erwin
+ *
+ */
 public class LoginPage extends AbstractPage {
 
 	// private String myPageUrl =

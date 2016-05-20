@@ -1,9 +1,19 @@
 package test.java.pageobjects;
 
+import test.java.modules.profiles.User;
+
 public interface Page {
+	public boolean isLoggedIn(User user);
+	
 	public String getSignInText();
 
 	public String getSignOutText();
+	
+	public boolean hasSignInLink();
+	
+	public boolean hasSignOutLink();
+	
+	public boolean hasRegisterLink();
 
 	public boolean hasAccountLink();
 
@@ -32,6 +42,4 @@ public interface Page {
 	public boolean hasMenuItemBridge();
 
 	public boolean hasMenuItemSports();
-	
-	public boolean hasLinkWithText(String text);
 }

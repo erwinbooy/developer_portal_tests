@@ -1,7 +1,12 @@
-package test.java.pageobjects;
+package test.java.helpers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import test.java.pageobjects.HomePage;
+import test.java.pageobjects.LoginPage;
+import test.java.pageobjects.NavigationSoftwarePage;
+import test.java.pageobjects.OnlineNavigationPage;
 
 public class PageProvider {
 

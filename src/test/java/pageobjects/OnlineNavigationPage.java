@@ -2,7 +2,11 @@ package test.java.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+/**
+ * This is the page you get after you click on the Online Navigation menu item
+ * @author Erwin
+ *
+ */
 public class OnlineNavigationPage extends AbstractPage {
 
 	// Sidebar navigation links

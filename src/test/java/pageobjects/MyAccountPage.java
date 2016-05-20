@@ -2,6 +2,11 @@ package test.java.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 
+/**
+ * This is the page you get after you click the My Account link in the user account links
+ * @author Erwin
+ *
+ */
 public class MyAccountPage extends AbstractPage {
 
 	/**

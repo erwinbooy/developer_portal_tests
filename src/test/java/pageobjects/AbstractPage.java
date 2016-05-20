@@ -8,11 +8,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import test.java.modules.profiles.User;
+
 /**
  * @author Erwin
  *
  *         Abstract class that performs the standard stuff that a Page needs It
  *         implements the HoyhoyPage interface
+ *         All the Menu products and user account links are available here as they are available for all pages
  */
 public abstract class AbstractPage implements Page {
 
@@ -21,20 +24,19 @@ public abstract class AbstractPage implements Page {
 	public Log logger = null;
 
 	// These are the links from the Header which are used by all the other pages
-	public static String link_signin = "//li[@class='first sign-in']/a";
-	public static String link_register = "//li[@class='register']/a";
-	public static String link_account = "//li[@class='account']/a";
-	public static String link_dashboard = "//li[@class='dashboard toggle']/a";
-	public static String link_signout = "//li[@class='last sign-out']/a";
-	public static String link_with_text = "";
+	public static String user_account_link_signin = "//li[@class='first sign-in']/a";
+	public static String user_account_link_register = "//li[@class='register']/a";
+	public static String user_account_link_account = "//li[@class='account']/a";
+	public static String user_account_link_dashboard = "//li[@class='dashboard toggle']/a";
+	public static String user_account_link_signout = "//li[@class='last sign-out']/a";
 	// These are the links from the Menu
-	public static String menu_items = "//div[@id='local']";
-	public static String menu_item_home = "/ul/li//a[contains(.,'Home')]";
-	public static String menu_item_online_navigation = "/ul/li//a[contains(.,'Online Navigation')]";
-	public static String menu_item_navigation_software = "/ul/li//a[contains(.,'Navigation Software')]";
-	public static String menu_item_real_time_maps = "/ul/li//a[contains(.,'Real-Time Maps')]";
-	public static String menu_item_bridge = "/ul/li//a[contains(.,'Bridge')]";
-	public static String menu_item_sports = "/ul/li//a[contains(.,'Sports')]";
+	public static String product_menu_items = "//div[@id='local']";
+	public static String product_menu_item_home = "/ul/li//a[contains(.,'Home')]";
+	public static String product_menu_item_online_navigation = "/ul/li//a[contains(.,'Online Navigation')]";
+	public static String product_menu_item_navigation_software = "/ul/li//a[contains(.,'Navigation Software')]";
+	public static String product_menu_item_real_time_maps = "/ul/li//a[contains(.,'Real-Time Maps')]";
+	public static String product_menu_item_bridge = "/ul/li//a[contains(.,'Bridge')]";
+	public static String product_menu_item_sports = "/ul/li//a[contains(.,'Sports')]";
 
 	// Text
 	public static String text_signedin = "//li[@class='first status']";
@@ -50,6 +52,30 @@ public abstract class AbstractPage implements Page {
 		logger = LogFactory.getLog(this.getClass());
 	}
 
+	/**
+	 * Method to verify that the user is logged in To do this we also need to
+	 * have the page
+	 * 
+	 * This method could also be moved to the user because it doesn't really
+	 * need the profile But lets leave it here for now
+	 * 
+	 * @param myUser
+	 * @return
+	 */
+	public boolean isLoggedIn(User myUser) {
+		// Verify that the name is mentioned on the page
+		String text = getSignInText();
+		if (text.equalsIgnoreCase("Signed in as " + myUser.getUsername())) {
+			// Besides that the login link should have also been changed to Sign
+			// out
+			text = getSignOutText();
+			if (text.equalsIgnoreCase("Sign Out")) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	/**
 	 * This method can be used to check if something exists on the page If it
 	 * exists the WebElement will be returned
@@ -106,13 +132,55 @@ public abstract class AbstractPage implements Page {
 	}
 
 	/**
+	 * Return boolean if Sign in link is showing or not
+	 * 
+	 * @return text
+	 */
+	public boolean hasSignInLink() {
+		try {
+			findElementOnPage(By.xpath(user_account_link_signin));
+			return true;
+		} catch (Exception ex) {
+			return false;
+		}
+	}
+
+	/**
+	 * Return boolean if Sign out link is showing or not
+	 * 
+	 * @return text
+	 */
+	public boolean hasSignOutLink() {
+		try {
+			findElementOnPage(By.xpath(user_account_link_signout));
+			return true;
+		} catch (Exception ex) {
+			return false;
+		}
+	}
+
+	/**
+	 * Return boolean if Register link is showing or not
+	 * 
+	 * @return text
+	 */
+	public boolean hasRegisterLink() {
+		try {
+			findElementOnPage(By.xpath(user_account_link_register));
+			return true;
+		} catch (Exception ex) {
+			return false;
+		}
+	}
+
+	/**
 	 * Return the text of the Sign out element
 	 * 
 	 * @return text
 	 */
 	public String getSignOutText() {
 		try {
-			WebElement so = waitForElementPresent(By.xpath(link_signout));
+			WebElement so = findElementOnPage(By.xpath(user_account_link_signout));
 			return so.getText();
 		} catch (Exception ex) {
 			return "Couldn't find the Sign Out link";
@@ -126,7 +194,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public boolean hasAccountLink() {
 		try {
-			findElementOnPage(By.xpath(link_account));
+			findElementOnPage(By.xpath(user_account_link_account));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -140,7 +208,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public boolean hasDashboardLink() {
 		try {
-			findElementOnPage(By.xpath(link_dashboard));
+			findElementOnPage(By.xpath(user_account_link_dashboard));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -154,7 +222,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public boolean hasMenuItemHome() {
 		try {
-			findElementOnPage(By.xpath(menu_items + menu_item_home));
+			findElementOnPage(By.xpath(product_menu_items + product_menu_item_home));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -168,7 +236,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public boolean hasMenuItemOnlineNavigation() {
 		try {
-			findElementOnPage(By.xpath(menu_items + menu_item_online_navigation));
+			findElementOnPage(By.xpath(product_menu_items + product_menu_item_online_navigation));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -182,7 +250,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public boolean hasMenuItemNavigationSoftware() {
 		try {
-			findElementOnPage(By.xpath(menu_items + menu_item_navigation_software));
+			findElementOnPage(By.xpath(product_menu_items + product_menu_item_navigation_software));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -196,7 +264,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public boolean hasMenuItemRealTimeMaps() {
 		try {
-			findElementOnPage(By.xpath(menu_items + menu_item_real_time_maps));
+			findElementOnPage(By.xpath(product_menu_items + product_menu_item_real_time_maps));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -210,7 +278,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public boolean hasMenuItemBridge() {
 		try {
-			findElementOnPage(By.xpath(menu_items + menu_item_bridge));
+			findElementOnPage(By.xpath(product_menu_items + product_menu_item_bridge));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -224,7 +292,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public boolean hasMenuItemSports() {
 		try {
-			findElementOnPage(By.xpath(menu_items + menu_item_sports));
+			findElementOnPage(By.xpath(product_menu_items + product_menu_item_sports));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -236,7 +304,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public void clickMenuItemHome() {
 		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(menu_items + menu_item_home)).click();
+		waitForElementIsClickable(By.xpath(product_menu_items + product_menu_item_home)).click();
 	}
 
 	/**
@@ -244,7 +312,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public void clickMenuItemOnlineNavigation() {
 		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(menu_items + menu_item_online_navigation)).click();
+		waitForElementIsClickable(By.xpath(product_menu_items + product_menu_item_online_navigation)).click();
 	}
 
 	/**
@@ -252,7 +320,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public void clickMenuItemNavigationSoftware() {
 		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(menu_items + menu_item_navigation_software)).click();
+		waitForElementIsClickable(By.xpath(product_menu_items + product_menu_item_navigation_software)).click();
 	}
 
 	/**
@@ -260,7 +328,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public void clickMenuItemRealTimeMaps() {
 		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(menu_items + menu_item_real_time_maps)).click();
+		waitForElementIsClickable(By.xpath(product_menu_items + product_menu_item_real_time_maps)).click();
 	}
 
 	/**
@@ -268,7 +336,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public void clickMenuItemBridge() {
 		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(menu_items + menu_item_bridge)).click();
+		waitForElementIsClickable(By.xpath(product_menu_items + product_menu_item_bridge)).click();
 	}
 
 	/**
@@ -276,7 +344,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public void clickMenuItemSports() {
 		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(menu_items + menu_item_sports)).click();
+		waitForElementIsClickable(By.xpath(product_menu_items + product_menu_item_sports)).click();
 	}
 
 	/**
@@ -284,7 +352,7 @@ public abstract class AbstractPage implements Page {
 	 */
 	public void clickSignIn() {
 		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(link_signin)).click();
+		waitForElementIsClickable(By.xpath(user_account_link_signin)).click();
 	}
 
 	/**
@@ -292,14 +360,6 @@ public abstract class AbstractPage implements Page {
 	 */
 	public void clickSignOut() {
 		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(link_signout)).click();
-	}
-	
-	/**
-	 * Checks if there is a link with this text
-	 */
-	public boolean hasLinkWithText(String text){
-		findElementOnPage(By.xpath(link_with_text));
-		return false;
+		waitForElementIsClickable(By.xpath(user_account_link_signout)).click();
 	}
 }

@@ -13,6 +13,7 @@ import org.apache.commons.logging.LogFactory;
 import test.java.modules.profiles.Profile;
 import test.java.modules.profiles.Profile1;
 import test.java.modules.profiles.Profile2;
+import test.java.modules.profiles.Roles;
 import test.java.modules.profiles.User;
 
 /**
@@ -54,7 +55,7 @@ public class TestUsers {
 					if (fields[3].equals("1")) {
 						user.setProfile(new Profile1());
 					} else {
-						user.setProfile(new Profile2());
+						user.setRole(Roles.valueOf(fields[3]));
 					}
 					users.add(user);
 				}
@@ -78,7 +79,7 @@ public class TestUsers {
 	 * 
 	 * @return
 	 */
-	public static User getUserWithRole(Profile role) throws Exception {
+	public static User getUserWithRole(Enum<Roles> role) throws Exception {
 		// If we don't have a user yet we will get one from our file
 		if (myUsers == null) {
 			// Let's find a user with this role for our test
@@ -88,7 +89,7 @@ public class TestUsers {
 		Iterator<User> iter = myUsers.iterator();
 		while (iter.hasNext()) {
 			User u = iter.next();
-			if (u.getProfile().getClass().equals(role.getClass())) {
+			if (u.getRole() == role) {
 				return u;
 			}
 		}

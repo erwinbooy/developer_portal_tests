@@ -53,14 +53,6 @@ public class Profile2 extends AbstractProfile {
 		return super.hasCorrectMenuItems(user, myPage, true, true, true, true, true, false);
 	}
 
-	@Override
-	/**
-	 * We will use the basic logic from the Abstract class
-	 */
-	public boolean isLoggedIn(User myUser, Page myPage) {
-		return super.isLoggedIn(myUser, myPage);
-	}
-
 	/**
 	 * Method that checks if this profile has the correct sidebar items
 	 * 

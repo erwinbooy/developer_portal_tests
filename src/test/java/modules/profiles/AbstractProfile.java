@@ -13,30 +13,6 @@ import test.java.pageobjects.Page;
 public abstract class AbstractProfile implements Profile {
 
 	/**
-	 * Method to verify that the user is logged in To do this we also need to
-	 * have the page
-	 * 
-	 * This method could also be moved to the user because it doesn't really
-	 * need the profile But lets leave it here for now
-	 * 
-	 * @param myUser
-	 * @return
-	 */
-	public boolean isLoggedIn(User myUser, Page myPage) {
-		// Verify that the name is mentioned on the page
-		String text = myPage.getSignInText();
-		if (text.equalsIgnoreCase("Signed in as " + myUser.getUsername())) {
-			// Besides that the login link should have also been changed to Sign
-			// out
-			text = myPage.getSignOutText();
-			if (text.equalsIgnoreCase("Sign Out")) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	/**
 	 * ; Method that checks if this profile has the correct links This profile
 	 * should have the following links. Note that everything is available for
 	 * the highest role in the system

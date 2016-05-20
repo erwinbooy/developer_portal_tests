@@ -10,10 +10,6 @@ import test.java.pageobjects.Page;
  * @author Erwin
  */
 public interface Profile {
-	/**
-	 * Check if the user is logged in
-	 */
-	public boolean isLoggedIn(User user, Page page);
 
 	/**
 	 * Check if the correct links are showing at the top

@@ -11,6 +11,7 @@ public class User {
 	private String userpwd = null;
 	private String userid = null;
 	private Profile profile = null;
+	private Roles role = null;
 
 	public String getUsername() {
 		return username;
@@ -42,5 +43,13 @@ public class User {
 
 	public void setProfile(Profile profile) {
 		this.profile = profile;
+	}
+
+	public Roles getRole() {
+		return role;
+	}
+
+	public void setRole(Roles role) {
+		this.role = role;
 	}
 }

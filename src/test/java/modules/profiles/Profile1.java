@@ -36,13 +36,6 @@ import test.java.pageobjects.Page;
 public class Profile1 extends AbstractProfile {
 
 	/**
-	 * We will use the basic logic from the Abstract class
-	 */
-	public boolean isLoggedIn(User myUser, Page myPage) {
-		return super.isLoggedIn(myUser, myPage);
-	}
-
-	/**
 	 * Method that checks if this profile has the correct links
 	 * 
 	 * @return true/false
