@@ -15,17 +15,17 @@ public class SportsPageSteps {
 		myPage = PageProvider.getSportsPage();
 	}
 	
-	@Then("^I see the sports link overview (.*)$")
+	@Then("^I see the overview link on the sports page (.*)$")
 	public void i_see_the_sports_link_overview(String visible) throws Throwable {
 		assertTrue(myPage.hasSideBarItemOverview() == Boolean.parseBoolean(visible));
 	}
 
-	@Then("^I see the sports link camera_media_server (.*)$")
+	@Then("^I see the camera_media_server item on the sports page (.*)$")
 	public void i_see_the_sports_link_camera_media_server(String visible) throws Throwable {
 		assertTrue(myPage.hasSideBarItemCameraMediaServer() == Boolean.parseBoolean(visible));
 	}
 
-	@Then("^I see the sports link mysports_cloud (.*)$")
+	@Then("^I see the my_sports item on the sports page (.*)$")
 	public void i_see_the_sports_link_mysports_cloud(String visible) throws Throwable {
 		assertTrue(myPage.hasSideBarItemMySportsCloud() == Boolean.parseBoolean(visible));
 	}

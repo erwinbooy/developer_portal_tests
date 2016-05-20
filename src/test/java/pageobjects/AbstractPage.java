@@ -351,15 +351,26 @@ public abstract class AbstractPage implements Page {
 	 * Click on the link Sign In
 	 */
 	public void clickSignIn() {
-		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(user_account_link_signin)).click();
+		try{
+			// First we try to click on the signin link
+			findElementOnPage(By.xpath(user_account_link_signin)).click();
+		} catch (Exception ex){
+			// It seems the link was not there so we are probably already logged in
+			// So lets just logout and login again
+			clickSignOut();
+			clickSignIn();
+		}
 	}
 
 	/**
 	 * Click on the link Out In
 	 */
 	public void clickSignOut() {
-		// First we wait for the page to have been built
-		waitForElementIsClickable(By.xpath(user_account_link_signout)).click();
+		try{
+			// First we try to click on the signout link
+			findElementOnPage(By.xpath(user_account_link_signout)).click();
+		} catch (Exception ex){
+			// If link is not there it is okay
+		}
 	}
 }

@@ -42,6 +42,8 @@ public class LoginSteps{
 	public void given_I_am_not_logged_in() throws Throwable {
 		// Lets just open the homepage 
 		HomePage homePage = PageProvider.getDeveloperHomePage();
+		// make sure we are not logged in
+		homePage.clickSignOut();
 		homePage.OpenPage();
 	}
 	
