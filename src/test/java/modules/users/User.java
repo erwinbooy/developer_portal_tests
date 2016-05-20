@@ -1,4 +1,4 @@
-package test.java.modules.profiles;
+package test.java.modules.users;
 
 /**
  * Simple DTO to store article information
@@ -10,7 +10,6 @@ public class User {
 	private String username = null;
 	private String userpwd = null;
 	private String userid = null;
-	private Profile profile = null;
 	private Roles role = null;
 
 	public String getUsername() {
@@ -35,14 +34,6 @@ public class User {
 
 	public void setUserid(String userid) {
 		this.userid = userid;
-	}
-
-	public Profile getProfile() {
-		return profile;
-	}
-
-	public void setProfile(Profile profile) {
-		this.profile = profile;
 	}
 
 	public Roles getRole() {

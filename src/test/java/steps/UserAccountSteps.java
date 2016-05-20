@@ -1,26 +1,19 @@
 package test.java.steps;
-
+import static org.junit.Assert.assertTrue;
 import cucumber.api.java.en.Then;
 import test.java.helpers.PageProvider;
 import test.java.pageobjects.Page;
-import static org.junit.Assert.assertTrue;
 
 /**
- * This class contains all the steps needed for the User Account links
- * Since these links are available everywhere we just use the HomePage 
- * - clicking on the links
- * - seeing the links
- * - etc.
+ * This class contains all the steps needed for the Product Menu
  * @author Erwin
- *
  */
 public class UserAccountSteps {
+	private Page myPage = null;
 	
 	public UserAccountSteps(){
 		myPage = PageProvider.getDeveloperHomePage();
 	}
-	
-	private Page myPage = null;
 
 	@Then("^I see the user sign_in link (.*)$")
 	public void then_I_see_user_sign_in(String link)  throws Throwable {

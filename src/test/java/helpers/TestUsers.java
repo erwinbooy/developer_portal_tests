@@ -10,11 +10,8 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import test.java.modules.profiles.Profile;
-import test.java.modules.profiles.Profile1;
-import test.java.modules.profiles.Profile2;
-import test.java.modules.profiles.Roles;
-import test.java.modules.profiles.User;
+import test.java.modules.users.Roles;
+import test.java.modules.users.User;
 
 /**
  * Class to read the file with test data The file itself is excluded from the
@@ -52,10 +49,11 @@ public class TestUsers {
 					user.setUserid(fields[0]);
 					user.setUserpwd(fields[1]);
 					user.setUsername(fields[2]);
-					if (fields[3].equals("1")) {
-						user.setProfile(new Profile1());
-					} else {
+					try{
 						user.setRole(Roles.valueOf(fields[3]));
+					} catch (Exception unknown_role){						
+						logger.error("The role from the file does not exist in the Enum class: " + fields[3] + " Role was set to NONE");
+						user.setRole(Roles.NONE);
 					}
 					users.add(user);
 				}
@@ -91,35 +89,6 @@ public class TestUsers {
 			User u = iter.next();
 			if (u.getRole() == role) {
 				return u;
-			}
-		}
-		// Obviously we didn't find any user with that role
-		return null;
-	}
-
-	/**
-	 * Method to get a user. If it is not available it will get it from file
-	 * 
-	 * @return
-	 */
-	public static User getUserWithRoleNbr(int role) throws Exception {
-		// If we don't have a user yet we will get one from our file
-		if (myUsers == null) {
-			// Let's find a user with this role for our test
-			myUsers = TestUsers.getAllTestUsers();
-		}
-		// Now find the first user we can that has this role
-		Iterator<User> iter = myUsers.iterator();
-		while (iter.hasNext()) {
-			User u = iter.next();
-			if(role==1){
-				if (u.getProfile().getClass().equals(Profile1.class)) {
-					return u;
-				}
-			} else {
-				if (u.getProfile().getClass().equals(Profile2.class)) {
-					return u;
-				}
 			}
 		}
 		// Obviously we didn't find any user with that role

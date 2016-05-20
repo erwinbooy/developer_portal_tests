@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import test.java.modules.profiles.User;
+import test.java.modules.users.User;
 
 /**
  * This Page is for the login details screen that you get after you click the Sign in link

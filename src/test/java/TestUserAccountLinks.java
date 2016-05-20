@@ -12,8 +12,8 @@ import cucumber.api.junit.Cucumber;
  *
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/resources/features/profiles")
-public class ProfileTests {
+@CucumberOptions(features = "src/test/java/resources/features/roles")
+public class TestUserAccountLinks {
 	// No code needed here
 	// This tests executes all the features in the profiles directory
 }

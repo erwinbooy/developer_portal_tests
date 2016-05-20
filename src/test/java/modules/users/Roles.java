@@ -1,4 +1,4 @@
-package test.java.modules.profiles;
+package test.java.modules.users;
 
 public enum Roles {
 	NONE,

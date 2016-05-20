@@ -1,6 +1,6 @@
 package test.java.pageobjects;
 
-import test.java.modules.profiles.User;
+import test.java.modules.users.User;
 
 public interface Page {
 	public boolean isLoggedIn(User user);

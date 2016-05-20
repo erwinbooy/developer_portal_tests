@@ -5,8 +5,8 @@ import static org.junit.Assert.assertTrue;
 import cucumber.api.java.en.Given;
 import test.java.helpers.PageProvider;
 import test.java.helpers.TestUsers;
-import test.java.modules.profiles.Roles;
-import test.java.modules.profiles.User;
+import test.java.modules.users.Roles;
+import test.java.modules.users.User;
 import test.java.pageobjects.HomePage;
 import test.java.pageobjects.LoginPage;
 
