@@ -22,6 +22,7 @@ Feature: Test Product menu items per role
 	And I see the product menu realtime_maps <realtime_maps>
 	And I see the product menu bridge <bridge>
 	And I see the product menu sports <sports>
+	And I log out
 
 # Notes:
 # To see all roles check the Roles enum

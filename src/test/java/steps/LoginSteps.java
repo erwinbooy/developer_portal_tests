@@ -2,6 +2,7 @@ package test.java.steps;
 
 import static org.junit.Assert.assertTrue;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import test.java.helpers.PageProvider;
 import test.java.helpers.TestUsers;
@@ -9,6 +10,7 @@ import test.java.modules.users.Roles;
 import test.java.modules.users.User;
 import test.java.pageobjects.HomePage;
 import test.java.pageobjects.LoginPage;
+import test.java.pageobjects.Page;
 
 /**
  * This class can be called with different roles 
@@ -41,5 +43,12 @@ public class LoginSteps{
 		// Lets just open the homepage 
 		HomePage homePage = PageProvider.getDeveloperHomePage();
 		homePage.OpenPage();
+	}
+	
+	@And("^I log out$")
+	public void I_log_out() throws Throwable{
+		// Lets logout
+		Page homepage = PageProvider.getDeveloperHomePage();
+		homepage.clickSignOut();
 	}
 }

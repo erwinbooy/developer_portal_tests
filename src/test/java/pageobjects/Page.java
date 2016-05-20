@@ -30,6 +30,8 @@ public interface Page {
 	public void clickMenuItemBridge();
 
 	public void clickMenuItemSports();
+	
+	public void clickSignOut();
 
 	public boolean hasMenuItemHome();
 

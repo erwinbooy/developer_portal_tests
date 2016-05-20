@@ -11,10 +11,12 @@ import test.java.pageobjects.OnlineNavigationPage;
 public class PageProvider {
 
 	private static WebDriver driver = null;
+	private static boolean browser = false;
 
 	public static void init() {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
+		browser = true;
 	}
 
 	public static HomePage getDeveloperHomePage() {
@@ -35,5 +37,14 @@ public class PageProvider {
 
 	public static void tearDown() {
 		driver.quit();
+		browser = false;
+	}
+	
+	/**
+	 * See if the browser is already running
+	 * @return
+	 */
+	public boolean isBrowserRunning(){
+		return browser;
 	}
 }
