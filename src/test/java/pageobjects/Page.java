@@ -32,4 +32,6 @@ public interface Page {
 	public boolean hasMenuItemBridge();
 
 	public boolean hasMenuItemSports();
+	
+	public boolean hasLinkWithText(String text);
 }

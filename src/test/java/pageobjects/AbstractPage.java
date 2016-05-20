@@ -26,6 +26,7 @@ public abstract class AbstractPage implements Page {
 	public static String link_account = "//li[@class='account']/a";
 	public static String link_dashboard = "//li[@class='dashboard toggle']/a";
 	public static String link_signout = "//li[@class='last sign-out']/a";
+	public static String link_with_text = "";
 	// These are the links from the Menu
 	public static String menu_items = "//div[@id='local']";
 	public static String menu_item_home = "/ul/li//a[contains(.,'Home')]";
@@ -292,5 +293,13 @@ public abstract class AbstractPage implements Page {
 	public void clickSignOut() {
 		// First we wait for the page to have been built
 		waitForElementIsClickable(By.xpath(link_signout)).click();
+	}
+	
+	/**
+	 * Checks if there is a link with this text
+	 */
+	public boolean hasLinkWithText(String text){
+		findElementOnPage(By.xpath(link_with_text));
+		return false;
 	}
 }
