@@ -11,14 +11,12 @@ import org.openqa.selenium.WebDriver;
 public class NavigationSoftwarePage extends AbstractPage {
 
 	// Sidebar navigation links
-	public static String sidebar_id = "id('sub')";
-	public static String sidebar_item = "/ul/li/a";
-	public static String sidebar_navkit = "[text()='NavKit']";
-	public static String sidebar_sub_item = "/ul/ul/li/a";
-	public static String sidebar_documentation = "[text()='Documentation']";
-	public static String sidebar_downloads = "[text()='Downloads']";
-	public static String sidebar_faq = "[text()='FAQ']";
-	public static String sidebar_integration_kit = "[text()='Integration Kit']";
+	private static String sidebar_navkit = "[text()='NavKit']";
+	private static String sidebar_sub_item = "/ul/ul/li/a";
+	private static String sidebar_documentation = "[text()='Documentation']";
+	private static String sidebar_downloads = "[text()='Downloads']";
+	private static String sidebar_faq = "[text()='FAQ']";
+	private static String sidebar_integration_kit = "[text()='Integration Kit']";
 
 	/**
 	 * Constructor from the Abstract Class

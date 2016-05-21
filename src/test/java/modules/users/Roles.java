@@ -1,9 +1,9 @@
 package test.java.modules.users;
 
 public enum Roles {
-	NONE,
-	ADMIN,
-	INTERMEDIATE_TRAFFIC_DEVELOPER,
+	NONE,							// User doesn't have any role assigned
+	SUPER_USER,						// User has all the roles assigned
+	INTERMEDIATE_TRAFFIC_DEVELOPER,	
 	MIT_DEVELOPER,
 	MYSPORTS_CLOUD_DEVELOPER,
 	NAVKIT_DEVELOPER,

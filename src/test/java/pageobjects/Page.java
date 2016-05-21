@@ -17,8 +17,6 @@ public interface Page {
 
 	public boolean hasAccountLink();
 
-	public boolean hasDashboardLink();
-
 	public void clickMenuItemHome();
 
 	public void clickMenuItemOnlineNavigation();

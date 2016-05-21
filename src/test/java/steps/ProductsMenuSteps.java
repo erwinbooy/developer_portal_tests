@@ -8,7 +8,7 @@ import test.java.helpers.PageProvider;
 import test.java.pageobjects.Page;
 
 /**
- * This class contains all the steps needed for the User Account links
+ * This class contains all the steps needed for the Products Menu 
  * Since these links are available everywhere we just use the HomePage 
  * - clicking on the links
  * - seeing the links

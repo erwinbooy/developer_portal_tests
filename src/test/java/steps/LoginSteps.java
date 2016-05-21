@@ -13,11 +13,8 @@ import test.java.pageobjects.LoginPage;
 import test.java.pageobjects.Page;
 
 /**
- * This class can be called with different roles 
- * The roles should be defined in the profiles package
- * Each profile knows what it should see and what not
+ * This class contains the steps that are needed for loggin in and out
  * @author Erwin
- *
  */
 public class LoginSteps{
 	private User myUser = null;

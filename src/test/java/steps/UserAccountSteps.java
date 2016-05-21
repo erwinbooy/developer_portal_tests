@@ -6,7 +6,11 @@ import test.java.helpers.PageProvider;
 import test.java.pageobjects.Page;
 
 /**
- * This class contains all the steps needed for the Product Menu
+ * This class contains all the steps needed for the User Account links 
+ * In theory this is the Measury framework so this one is not that important 
+ * - clicking on the links
+ * - seeing the links
+ * - etc.
  * @author Erwin
  */
 public class UserAccountSteps {
@@ -29,11 +33,6 @@ public class UserAccountSteps {
 	@Then("^I see the user my_account link (.*)$")
 	public void then_I_see_user_my_account_link(String link)  throws Throwable {
 		assertTrue(myPage.hasAccountLink() == Boolean.parseBoolean(link));
-	}
-
-	@Then("^I see the user dashboard link (.*)$")
-	public void then_I_see_user_dashboard_link(String link)  throws Throwable {
-		assertTrue(myPage.hasDashboardLink() == Boolean.parseBoolean(link));
 	}
 
 	@Then("^I see the user sign_out link (.*)$")

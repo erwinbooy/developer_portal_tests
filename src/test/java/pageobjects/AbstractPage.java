@@ -23,11 +23,15 @@ public abstract class AbstractPage implements Page {
 	public WebDriverWait wait = null;
 	public Log logger = null;
 
+	// Sidebar navigation main links which are available for all products (read pages)
+	public static String sidebar_id = "id('sub')";
+	public static String sidebar_item = "/ul/li//a";
+	public static String sidebar_sub_item = "/ul/ul/li/a";
+
 	// These are the links from the Header which are used by all the other pages
 	public static String user_account_link_signin = "//li[@class='first sign-in']/a";
 	public static String user_account_link_register = "//li[@class='register']/a";
 	public static String user_account_link_account = "//li[@class='account']/a";
-	public static String user_account_link_dashboard = "//li[@class='dashboard toggle']/a";
 	public static String user_account_link_signout = "//li[@class='last sign-out']/a";
 	// These are the links from the Menu
 	public static String product_menu_items = "//div[@id='local']";
@@ -195,20 +199,6 @@ public abstract class AbstractPage implements Page {
 	public boolean hasAccountLink() {
 		try {
 			findElementOnPage(By.xpath(user_account_link_account));
-			return true;
-		} catch (Exception ex) {
-			return false;
-		}
-	}
-
-	/**
-	 * Checks if there is a dashboard link on the page
-	 * 
-	 * @return
-	 */
-	public boolean hasDashboardLink() {
-		try {
-			findElementOnPage(By.xpath(user_account_link_dashboard));
 			return true;
 		} catch (Exception ex) {
 			return false;

@@ -10,16 +10,14 @@ import org.openqa.selenium.WebDriver;
 public class OnlineNavigationPage extends AbstractPage {
 
 	// Sidebar navigation links
-	public static String sidebar_id = "id('sub')";
-	public static String sidebar_item = "/ul/li/a";
-	public static String sidebar_overview = "[text()='Overview']";
-	public static String sidebar_online_routing = "[text()='Online Routing']";
-	public static String sidebar_online_maps = "[text()='Online Maps']";
-	public static String sidebar_online_search = "[text()='Online Search']";
-	public static String sidebar_online_traffic = "[text()='Online Traffic']";
-	public static String sidebar_maps_sdk = "[text()='Maps SDK']";
-	public static String sidebar_request_access = "[text()='Request access']";
-	public static String sidebar_api_explorer = "[text()='API Explorer']";
+	private static String sidebar_overview = "[text()='Overview']";
+	private static String sidebar_online_routing = "[text()='Online Routing']";
+	private static String sidebar_online_maps = "[text()='Online Maps']";
+	private static String sidebar_online_search = "[text()='Online Search']";
+	private static String sidebar_online_traffic = "[text()='Online Traffic']";
+	private static String sidebar_maps_sdk = "[text()='Maps SDK']";
+	private static String sidebar_request_access = "[text()='Request access']";
+	private static String sidebar_api_explorer = "[text()='API Explorer']";
 
 	/**
 	 * Constructor from the Abstract Class

@@ -28,5 +28,6 @@ Feature: Test Product menu items per role
 # If you are logged in you see Sign Out + Links for your role
    Examples:
    | role			| home	| online_navigation	| navigation_software	| realtime_maps	| bridge 	| sports| 
+   | NONE			| true	| true				| true					| true			| true		| true	| 
+   | SUPER_USER		| true	| true				| true					| true			| true		| true	|
    | MIT_DEVELOPER	| true	| true				| true					| true			| true		| true	|
-   | ADMIN			| true	| true				| true					| true			| true		| true	|
