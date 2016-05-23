@@ -348,7 +348,7 @@ public abstract class AbstractPage implements Page {
 			// It seems the link was not there so we are probably already logged in
 			// So lets just logout and login again
 			clickSignOut();
-			clickSignIn();
+			findElementOnPage(By.xpath(user_account_link_signin)).click();
 		}
 	}
 
