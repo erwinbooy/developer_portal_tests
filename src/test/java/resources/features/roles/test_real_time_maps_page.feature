@@ -36,9 +36,9 @@ Feature: Test Real Time Maps page with different roles
     Given I am not logged in
     When I click on the realtime maps item in the product menu
     When I click on nds map updates sidebar item on the real time maps page
-    Then I see the documentation under the map input tracker sidebar item false
-    And I see the faq under the map input tracker sidbar item false
-    And I see the request acccess under the map input tracker sidbar item true
+    Then I see the documentation under the nds map updates sidebar item false
+    And I see the download under the nds map updates sidebar item false
+    And I see the request acccess under the nds map updates sidbar item true
 
 # 4:
   Scenario Outline: test the sidebar item NDS Map Updates on the Real Time Maps page for each role
