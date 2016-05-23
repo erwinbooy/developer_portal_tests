@@ -22,14 +22,14 @@ Feature: Test Real Time Maps page with different roles
 # Notes: only users with the mit developer role can see the links under the Map Input Tracker sidebar item
    Examples:
   | role							|documentation	| faq	| request_access| 
-  | NONE							| false			| false	| true			|
+#  | NONE							| false			| false	| true			|
   | SUPER_USER						| true			| true	| true			|
   | MIT_DEVELOPER					| true			| true	| true			|
-  | MYSPORTS_CLOUD_DEVELOPER		| false			| false	| true			|
-  | NAVKIT_DEVELOPER				| false			| false	| true			|
-  | NAVKIT_INTEGRATOR				| false			| false	| true			|
-  | NDS_MAP_UPDATES_DEVELOPER		| false			| false	| true			|
-  | CAMERA_MEDIA_SERVER_DEVELOPER	| false			| false	| true			|
+#  | MYSPORTS_CLOUD_DEVELOPER		| false			| false	| true			|
+#  | NAVKIT_DEVELOPER				| false			| false	| true			|
+#  | NAVKIT_INTEGRATOR				| false			| false	| true			|
+#  | NDS_MAP_UPDATES_DEVELOPER		| false			| false	| true			|
+#  | CAMERA_MEDIA_SERVER_DEVELOPER	| false			| false	| true			|
 
 # 3:
   Scenario: test the sidebar item NDS Map Updates on the Real Time Maps page for someone that is not logged in
@@ -52,11 +52,11 @@ Feature: Test Real Time Maps page with different roles
 # Notes: only users with the mit developer role can see the links under the NDS Map Updates sidebar item
    Examples:
   | role							|documentation	| download	| request_access| 
-  | NONE							| false			| false		| true			|
-#  | SUPER_USER						| true			| true		| true			|
+#  | NONE							| false			| false		| true			|
+  | SUPER_USER						| true			| true		| true			|
 #  | MIT_DEVELOPER					| false			| false		| true			|
 #  | MYSPORTS_CLOUD_DEVELOPER		| false			| false		| true			|
 #  | NAVKIT_DEVELOPER				| false			| false		| true			|
 #  | NAVKIT_INTEGRATOR				| false			| false		| true			|
-#  | NDS_MAP_UPDATES_DEVELOPER		| true			| true		| true			|
+  | NDS_MAP_UPDATES_DEVELOPER		| true			| true		| true			|
 #  | CAMERA_MEDIA_SERVER_DEVELOPER	| false			| false		| true			|    
