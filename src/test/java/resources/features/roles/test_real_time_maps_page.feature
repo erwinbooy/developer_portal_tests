@@ -53,10 +53,10 @@ Feature: Test Real Time Maps page with different roles
    Examples:
   | role							|documentation	| download	| request_access| 
   | NONE							| false			| false		| true			|
-  | SUPER_USER						| true			| true		| true			|
-  | MIT_DEVELOPER					| false			| false		| true			|
-  | MYSPORTS_CLOUD_DEVELOPER		| false			| false		| true			|
-  | NAVKIT_DEVELOPER				| false			| false		| true			|
-  | NAVKIT_INTEGRATOR				| false			| false		| true			|
-  | NDS_MAP_UPDATES_DEVELOPER		| true			| true		| true			|
-  | CAMERA_MEDIA_SERVER_DEVELOPER	| false			| false		| true			|    
+#  | SUPER_USER						| true			| true		| true			|
+#  | MIT_DEVELOPER					| false			| false		| true			|
+#  | MYSPORTS_CLOUD_DEVELOPER		| false			| false		| true			|
+#  | NAVKIT_DEVELOPER				| false			| false		| true			|
+#  | NAVKIT_INTEGRATOR				| false			| false		| true			|
+#  | NDS_MAP_UPDATES_DEVELOPER		| true			| true		| true			|
+#  | CAMERA_MEDIA_SERVER_DEVELOPER	| false			| false		| true			|    
