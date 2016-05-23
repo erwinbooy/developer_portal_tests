@@ -54,7 +54,7 @@ public class SportsPageSteps {
 
 	@Then("^I see the documentation under the mysports cloud sidebar item (.*)$")
 	public void i_see_the_documentation_under_the_mysports_cloud_sidebar_item(String visible) throws Throwable {
-		assertTrue(myPage.hasSideBarSubItemDocumentation() == Boolean.parseBoolean(visible));
+		assertTrue(myPage.hasSideBarSubItemMySportsDocumentation() == Boolean.parseBoolean(visible));
 	}
 
 	@Then("^I see the faq under the mysports cloud sidbar item (.*)$")

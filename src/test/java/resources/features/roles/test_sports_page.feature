@@ -19,7 +19,7 @@ Feature: Test sports page with different roles
    	And I see the my_sports item on the sports page <mysports_cloud>
 
    Examples:
-  | role							| overview	| camera_media_server	| mysports_cloud| 
+  | role							| overview	| camera_media_server	| mysports_cloud|
   | NONE							| true		| false					| true			|
   | SUPER_USER						| true		| true					| true			|
   | MIT_DEVELOPER					| true		| false					| true			|
@@ -43,13 +43,14 @@ Feature: Test sports page with different roles
 # Notes: only users with the mysports cloud developer can see the links under the MySports Cloud
    Examples:
   | role							| authorization	| documentation	| faq	| forum	| terms_of_use	| 
+  | NONE							| true			| true			| true	| true	| true			|
   | SUPER_USER						| true			| true			| true	| true	| true			|
-  | MIT_DEVELOPER					| false			| false			| false	| false	| false			|
+  | MIT_DEVELOPER					| true			| true			| true	| true	| true			|
   | MYSPORTS_CLOUD_DEVELOPER		| true			| true			| true	| true	| true			|
-  | NAVKIT_DEVELOPER				| false			| false			| false	| false	| false			|
-  | NAVKIT_INTEGRATOR				| false			| false			| false	| false	| false			|
-  | NDS_MAP_UPDATES_DEVELOPER		| false			| false			| false	| false	| false			|
-  | CAMERA_MEDIA_SERVER_DEVELOPER	| false			| false			| false	| false	| false			|  
+  | NAVKIT_DEVELOPER				| true			| true			| true	| true	| true			|
+  | NAVKIT_INTEGRATOR				| true			| true			| true	| true	| true			|
+  | NDS_MAP_UPDATES_DEVELOPER		| true			| true			| true	| true	| true			|
+  | CAMERA_MEDIA_SERVER_DEVELOPER	| true			| true			| true	| true	| true			|
   
   
 # 4: This test is actually an extension of test #2
@@ -64,11 +65,12 @@ Feature: Test sports page with different roles
 
 # Only users with the Camera Media Server Developer role see the Camera Media Server
    Examples:
-  | role							| api_guidelines| documentation	| sensor_format	| tags_format	| 
-  | SUPER_USER						| true			| true			| true			| true			|
-  | MIT_DEVELOPER					| false			| false			| false			| false			|
-  | MYSPORTS_CLOUD_DEVELOPER		| false			| false			| false			| false			|
-  | NAVKIT_DEVELOPER				| false			| false			| false			| false			|
-  | NAVKIT_INTEGRATOR				| false			| false			| false			| false			|
-  | NDS_MAP_UPDATES_DEVELOPER		| false			| false			| false			| false			|
-  | CAMERA_MEDIA_SERVER_DEVELOPER	| true			| true			| true			| true			|
+  | role							| api_guidelines	| documentation	| sensor_format	| tags_format	| 
+  | NONE							| false				| false			| false			| false			|
+  | SUPER_USER						| true				| true			| true			| true			|
+  | MIT_DEVELOPER					| false				| false			| false			| false			|
+  | MYSPORTS_CLOUD_DEVELOPER		| false				| false			| false			| false			|
+  | NAVKIT_DEVELOPER				| false				| false			| false			| false			|
+  | NAVKIT_INTEGRATOR				| false				| false			| false			| false			|
+  | NDS_MAP_UPDATES_DEVELOPER		| false				| false			| false			| false			|
+  | CAMERA_MEDIA_SERVER_DEVELOPER	| true				| true			| true			| true			|

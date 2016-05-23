@@ -6,7 +6,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import test.java.helpers.PageProvider;
 import test.java.pageobjects.NavigationSoftwarePage;
-import test.java.pageobjects.SportsPage;
 
 public class NavigationSoftwarePageSteps {
 

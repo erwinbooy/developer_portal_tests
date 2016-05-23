@@ -135,6 +135,21 @@ public class SportsPage extends AbstractPage {
 	}
 
 	/**
+	 * Check if the sidebar sub item Documentation is showing
+	 * 
+	 * @return
+	 */
+	public boolean hasSideBarSubItemMySportsDocumentation() {
+		try {
+			findElementOnPage(By.xpath(sidebar_id + sidebar_mysports_sub_item + sidebar_documentation));
+			return true;
+		} catch (Exception ex) {
+			// We didn't find the element
+		}
+		return false;
+	}
+
+	/**
 	 * Check if the sidebar sub item FAQ is showing
 	 * 
 	 * @return

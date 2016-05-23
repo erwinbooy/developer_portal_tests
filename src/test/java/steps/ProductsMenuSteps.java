@@ -28,6 +28,11 @@ public class ProductsMenuSteps {
 	public void i_click_on_the_sports_item_in_the_products_menu() throws Throwable {
 		myPage.clickMenuItemSports();
 	}
+
+	@When("^I click on the realtime maps item in the product menu$")
+	public void i_click_on_the_product_menu_realtime_maps() throws Throwable {
+		myPage.clickMenuItemRealTimeMaps();
+	}
 	
 	@Then("^I see the home item in the product menu (.*)$")
 	public void i_see_the_product_menu_home(String visible) throws Throwable {
