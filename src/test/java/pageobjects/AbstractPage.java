@@ -54,6 +54,7 @@ public abstract class AbstractPage implements Page {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, 5, 1);
 		logger = LogFactory.getLog(this.getClass());
+		
 	}
 
 	/**

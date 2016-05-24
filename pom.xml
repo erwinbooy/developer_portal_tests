@@ -35,5 +35,15 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		    <artifactId>selenium-java</artifactId>
 		    <version>2.53.0</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-htmlunit-driver</artifactId>
+		    <version>2.45.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>log4j</groupId>
+    		<artifactId>log4j</artifactId>
+    		<version>1.2.17</version>
+		</dependency>
     </dependencies>
 </project>
