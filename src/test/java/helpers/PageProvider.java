@@ -1,9 +1,7 @@
 package test.java.helpers;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-
-import com.gargoylesoftware.htmlunit.BrowserVersion;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import test.java.pageobjects.HomePage;
 import test.java.pageobjects.LoginPage;
@@ -18,8 +16,8 @@ public class PageProvider {
 	private static boolean browser = false;
 
 	public static void init() {
-		driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_24);
-		((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Erwin/AppData/Local/Google/Chrome/Application/chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		browser = true;
 	}
